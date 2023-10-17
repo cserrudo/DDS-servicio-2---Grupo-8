@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "947fd05e-39e8-484e-b712-acd4f1e0a1fb",
+		"name": "Ej",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30553042"
+	},
+	"item": [
+		{
+			"name": "ejemplo-cierre-fraudulento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"incidentes\": [\r\n    {\r\n      \"id\": 101,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 2,\r\n      \"usuarioCierre\": 1,\r\n      \"fechaApertura\": \"2023-09-10T10:00:00\",\r\n      \"fechaCierre\": \"2023-09-10T10:01:00\"\r\n    },\r\n    {\r\n      \"id\": 102,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 1,\r\n      \"usuarioCierre\": 3,\r\n      \"fechaApertura\": \"2023-09-10T10:01:30\",\r\n      \"fechaCierre\": \"2023-09-10T10:05:00\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/calcular-confiabilidad-usuario"
+			},
+			"response": [
+				{
+					"name": "localhost:8080/calcular-confiabilidad-usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"incidentes\": [\r\n    {\r\n      \"id\": 101,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 2,\r\n      \"usuarioCierre\": 1,\r\n      \"fechaApertura\": \"2023-09-10T10:00:00\",\r\n      \"fechaCierre\": \"2023-09-10T10:01:00\"\r\n    },\r\n    {\r\n      \"id\": 102,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 1,\r\n      \"usuarioCierre\": 3,\r\n      \"fechaApertura\": \"2023-09-10T10:01:30\",\r\n      \"fechaCierre\": \"2023-09-10T10:05:00\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/calcular-confiabilidad-usuario"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 17 Oct 2023 06:32:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gradoDeConfiabilidad\": \"CONFIABLE_NIVEL_2\",\n    \"puntosDeConfianza\": 5.3,\n    \"activo\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "ejemplo-apertura-fraudulenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"incidentes\": [\r\n    {\r\n      \"id\": 101,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 2,\r\n      \"usuarioCierre\": 1,\r\n      \"fechaApertura\": \"2023-09-10T10:00:00\",\r\n      \"fechaCierre\": \"2023-09-10T10:01:00\"\r\n    },\r\n    {\r\n      \"id\": 102,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 1,\r\n      \"usuarioCierre\": 3,\r\n      \"fechaApertura\": \"2023-09-10T10:01:30\",\r\n      \"fechaCierre\": \"2023-09-10T10:05:00\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/calcular-confiabilidad-usuario"
+			},
+			"response": [
+				{
+					"name": "localhost:8080/calcular-confiabilidad-usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"incidentes\": [\r\n    {\r\n      \"id\": 101,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 2,\r\n      \"usuarioCierre\": 1,\r\n      \"fechaApertura\": \"2023-09-10T10:00:00\",\r\n      \"fechaCierre\": \"2023-09-10T10:01:00\"\r\n    },\r\n    {\r\n      \"id\": 102,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 1,\r\n      \"usuarioCierre\": 3,\r\n      \"fechaApertura\": \"2023-09-10T10:01:30\",\r\n      \"fechaCierre\": \"2023-09-10T10:05:00\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/calcular-confiabilidad-usuario"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 17 Oct 2023 06:32:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gradoDeConfiabilidad\": \"CONFIABLE_NIVEL_2\",\n    \"puntosDeConfianza\": 5.3,\n    \"activo\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "ejemplo-apertura-o-cierre-normal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"incidentes\": [\r\n    {\r\n      \"id\": 101,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 2,\r\n      \"usuarioCierre\": 1,\r\n      \"fechaApertura\": \"2023-09-10T10:00:00\",\r\n      \"fechaCierre\": \"2023-09-10T10:01:00\"\r\n    },\r\n    {\r\n      \"id\": 102,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 1,\r\n      \"usuarioCierre\": 3,\r\n      \"fechaApertura\": \"2023-09-10T10:01:30\",\r\n      \"fechaCierre\": \"2023-09-10T10:05:00\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/calcular-confiabilidad-usuario"
+			},
+			"response": [
+				{
+					"name": "localhost:8080/calcular-confiabilidad-usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"incidentes\": [\r\n    {\r\n      \"id\": 101,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 2,\r\n      \"usuarioCierre\": 1,\r\n      \"fechaApertura\": \"2023-09-10T10:00:00\",\r\n      \"fechaCierre\": \"2023-09-10T10:01:00\"\r\n    },\r\n    {\r\n      \"id\": 102,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 1,\r\n      \"usuarioCierre\": 3,\r\n      \"fechaApertura\": \"2023-09-10T10:01:30\",\r\n      \"fechaCierre\": \"2023-09-10T10:05:00\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/calcular-confiabilidad-usuario"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 17 Oct 2023 06:32:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gradoDeConfiabilidad\": \"CONFIABLE_NIVEL_2\",\n    \"puntosDeConfianza\": 5.3,\n    \"activo\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "ejemplo-comunidad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"incidentes\": [\r\n    {\r\n      \"id\": 101,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 2,\r\n      \"usuarioCierre\": 1,\r\n      \"fechaApertura\": \"2023-09-10T10:00:00\",\r\n      \"fechaCierre\": \"2023-09-10T10:01:00\"\r\n    },\r\n    {\r\n      \"id\": 102,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 1,\r\n      \"usuarioCierre\": 3,\r\n      \"fechaApertura\": \"2023-09-10T10:01:30\",\r\n      \"fechaCierre\": \"2023-09-10T10:05:00\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/calcular-confiabilidad-usuario"
+			},
+			"response": [
+				{
+					"name": "localhost:8080/calcular-confiabilidad-usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"incidentes\": [\r\n    {\r\n      \"id\": 101,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 2,\r\n      \"usuarioCierre\": 1,\r\n      \"fechaApertura\": \"2023-09-10T10:00:00\",\r\n      \"fechaCierre\": \"2023-09-10T10:01:00\"\r\n    },\r\n    {\r\n      \"id\": 102,\r\n      \"servicio\": \"ServicioA\",\r\n      \"establecimiento\": \"EstablecimientoA\",\r\n      \"usuarioApertura\": 1,\r\n      \"usuarioCierre\": 3,\r\n      \"fechaApertura\": \"2023-09-10T10:01:30\",\r\n      \"fechaCierre\": \"2023-09-10T10:05:00\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/calcular-confiabilidad-usuario"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 17 Oct 2023 06:32:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gradoDeConfiabilidad\": \"CONFIABLE_NIVEL_2\",\n    \"puntosDeConfianza\": 5.3,\n    \"activo\": true\n}"
+				}
+			]
+		}
+	]
+}
