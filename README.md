@@ -3,7 +3,8 @@
 ## Pasos
 1. Ejecutar `main.java`.
 2. Ir a `http://localhost:8080/swagger` para visualizar los 2 endpoints disponibles y su documentación.
-3. Importar la colección `DdS.postman_collection` en Postman para ver 4 ejemplos de uso de los endpoints.
+3. Importar la colección `Ej.postman_comunidad_y_usuarios` en Postman para ver 4 ejemplos de uso de los endpoints (usuario con apertura fraudulenta, cierre fraudulento, apertura/cierre normal y comunidad) .
+
 
 Este servicio calcula el grado de confianza de usuarios y comunidades. El grado de confianza se mide en No confiable, Con reservas, Confiable Nivel 1 y Confiable Nivel 2.
 Todos los usuarios inician con 5 puntos de confianza y podrán modificar los puntajes a partir de las siguientes condiciones:
